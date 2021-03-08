@@ -16,3 +16,10 @@
 
 - [用户态与内核态、零拷贝](https://github.com/Chunar5354/interview_note/blob/main/notes/user_kernel.md)
 
+### go语言
+
+- [垃圾回收器](https://github.com/Chunar5354/interview_note/blob/main/notes/gc.md)
+
+- [抢占与伪抢占式调度](https://github.com/Chunar5354/interview_note/blob/main/notes/seize.md)
+
+- [GMP调度器](https://github.com/Chunar5354/interview_note/blob/main/notes/gmp.md)
