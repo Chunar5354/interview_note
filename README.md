@@ -16,6 +16,14 @@
 
 - [用户态与内核态、零拷贝](https://github.com/Chunar5354/interview_note/blob/main/notes/user_kernel.md)
 
+### 计算机网络
+
+- [三次握手与四次挥手](https://github.com/Chunar5354/interview_note/blob/main/notes/handshake.md)
+
+- [TCP连接的状态](https://github.com/Chunar5354/interview_note/blob/main/notes/tsp_status.md)
+
+- [TCP攻击](https://github.com/Chunar5354/interview_note/blob/main/notes/attack.md)
+
 ### go语言
 
 - [垃圾回收器](https://github.com/Chunar5354/interview_note/blob/main/notes/gc.md)
@@ -23,3 +31,5 @@
 - [抢占与伪抢占式调度](https://github.com/Chunar5354/interview_note/blob/main/notes/seize.md)
 
 - [GMP调度器](https://github.com/Chunar5354/interview_note/blob/main/notes/gmp.md)
+
+
