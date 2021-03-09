@@ -12,7 +12,7 @@
 
 - [物理内存与虚拟内存](https://github.com/Chunar5354/interview_note/blob/main/notes/memory.md)
 
-- [阻塞与非阻塞](https://github.com/Chunar5354/interview_note/blob/main/notes/note.md)
+- [阻塞与非阻塞](https://github.com/Chunar5354/interview_note/blob/main/notes/block.md)
 
 - [用户态与内核态、零拷贝](https://github.com/Chunar5354/interview_note/blob/main/notes/user_kernel.md)
 
