@@ -24,6 +24,10 @@
 
 - [TCP攻击](https://github.com/Chunar5354/interview_note/blob/main/notes/attack.md)
 
+- [TCP窗口](https://github.com/Chunar5354/interview_note/blob/main/notes/tcp_window.md)
+
+- [TCP拥塞控制](https://github.com/Chunar5354/interview_note/blob/main/notes/tcp_block.md)
+
 ### go语言
 
 - [垃圾回收器](https://github.com/Chunar5354/interview_note/blob/main/notes/gc.md)
