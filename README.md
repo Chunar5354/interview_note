@@ -45,3 +45,7 @@
 - [mysql事务特性及隔离级别](https://github.com/Chunar5354/interview_note/blob/main/notes/acid.md)
 
 - [mysql日志](https://github.com/Chunar5354/interview_note/blob/main/notes/mysql_log.md)
+
+### 算法
+
+- [算法题总结](https://github.com/Chunar5354/interview_note/blob/main/notes/algorithm.md)
