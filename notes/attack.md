@@ -9,3 +9,23 @@
 当连接出现异常时，会发送RST报文，强制中断连接
 
 比如像已经建立的连接发送SYN报文
+
+## XSS攻击
+
+跨站脚本攻击(Cross Site Scripting, CSS)，为了区别于层叠样式表(Cascsding Style Sheets)而写成`XSS`
+
+XSS指的是攻击者A在向被攻击者B的网站进行`输入`时输入了一段`带有HTML标签的内容`，可能包含Javascript脚本，而B就会按照HTML的规则解析这段内容，从而被攻击
+
+预防方式：对需要用户从输入的地方进行`转义和过滤`
+
+[参考](https://tech.meituan.com/2018/09/27/fe-security.html)
+
+## CSRF攻击
+
+跨站请求伪造(Cross-site Request Forgery)
+
+用户B在访问正常网站C之后访问了攻击者A的页面，由于此时B还保留着关于C的cookie，所以此时攻击者A可以`冒充B向C发起请求`，C会将A验证为B，这样A就可以用B的身份进行操作
+
+预防方式：由于在CSRF攻击中，攻击者A`只是冒用`了B的信息，并不能真正获取到信息，所以C可以给每个用户一个`Token`对访问者进行验证
+
+[参考](https://tech.meituan.com/2018/10/11/fe-security-csrf.html)
