@@ -19,3 +19,11 @@
 将二维dp数组降维成一维的思路：
 
 [![661Qmj.png](https://s3.ax1x.com/2021/03/17/661Qmj.png)](https://imgtu.com/i/661Qmj)
+
+# 双指针
+
+## 最长回文子串
+
+[leetcode 5](https://leetcode.com/problems/longest-palindromic-substring/)
+
+关键在于首先要跳过所有的相等字符
