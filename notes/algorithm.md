@@ -74,7 +74,7 @@
 
 - 今天买入，有两种情况：上一次是等待日和不是等待日，所以`buy = max(buy, prev_cooldown-prices[i])`
 
-- 今天卖出，上一次只能是买入，所以`sell = buy + prices[i]`
+- 今天卖出，上一次只能是买入，所以`sell = prev_buy + prices[i]`
 
 - 今天等待，有两种情况：上一次卖出和上一次等待，所以`cooldown = max(prev_sell, prev_cooldown)`
 
