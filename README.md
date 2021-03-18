@@ -30,6 +30,8 @@
 
 - [网络攻击](https://github.com/Chunar5354/interview_note/blob/main/notes/attack.md)
 
+- [各层报文](https://github.com/Chunar5354/interview_note/blob/main/notes/tcp_ip_message.md)
+
 ### go语言
 
 - [垃圾回收器](https://github.com/Chunar5354/interview_note/blob/main/notes/gc.md)
@@ -40,11 +42,15 @@
 
 ### MySQL
 
+- [mysql语句练习笔记](https://github.com/Chunar5354/interview_note/blob/main/notes/mysqlNote.md)
+
 - [mysql范式](https://github.com/Chunar5354/interview_note/blob/main/notes/paradigm.md)
 
 - [mysql事务特性及隔离级别](https://github.com/Chunar5354/interview_note/blob/main/notes/acid.md)
 
 - [mysql日志](https://github.com/Chunar5354/interview_note/blob/main/notes/mysql_log.md)
+
+- [mysql存储引擎](https://github.com/Chunar5354/interview_note/blob/main/notes/storage_engine.md)
 
 ### 算法
 
