@@ -62,7 +62,7 @@
 
 [leetcode 188](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)
 
-与买卖两次的逻辑相同，只不过这时有`2*k`个状态，不能用固定的指针来表示，所以用两个长度为k的数组buy和profit，`buy[i]`和`profit[i]`分别表示第i次买入和第i次卖出的利润
+与买卖两次的逻辑相同，只不过这时有`2*k`个状态，不能用固定的指针来表示，所以用两个长度为k的数组buy和sell，`buy[i]`和`sell[i]`分别表示第i次买入和第i次卖出的利润
 
 ### 进阶4：卖完需要等一天
 
