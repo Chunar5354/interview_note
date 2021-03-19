@@ -52,6 +52,10 @@
 
 - [mysql存储引擎](https://github.com/Chunar5354/interview_note/blob/main/notes/storage_engine.md)
 
+- [B树与B+树](https://github.com/Chunar5354/interview_note/blob/main/notes/b-tree.md)
+
+- [mysql索引](https://github.com/Chunar5354/interview_note/blob/main/notes/mysql_inedx.md)
+
 ### 算法
 
 - [算法题总结](https://github.com/Chunar5354/interview_note/blob/main/notes/algorithm.md)
