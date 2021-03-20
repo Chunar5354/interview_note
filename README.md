@@ -28,6 +28,8 @@
 
 - [HTTP状态码](https://github.com/Chunar5354/interview_note/blob/main/notes/httpStatus.md)
 
+- [HTTP版本差异](https://github.com/Chunar5354/interview_note/blob/main/notes/http_version.md)
+
 - [网络攻击](https://github.com/Chunar5354/interview_note/blob/main/notes/attack.md)
 
 - [各层报文](https://github.com/Chunar5354/interview_note/blob/main/notes/tcp_ip_message.md)
