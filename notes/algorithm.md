@@ -98,6 +98,18 @@
 
 所以`dp[i][j] = dp[i-1][j-1] + dp[i][j-1] + 1`，而dp[i][j]表示的是楼层数，所以当dp[i][j]超过给定的层数n时测试结束，此时的j就是所求的测试次数
 
+## 戳气球
+
+[leetcode 312](https://leetcode.com/problems/burst-balloons/)
+
+令dp[i][j]表示戳破从i到j范围内所有气球能得到的最高分数（不包括i和j），最终的答案就是dp[0][n+1]
+
+假设中间最后一个戳破的是k，那最后一次的分数就是`nums[i]*nums[k]*nums[j]`
+
+所以戳破i到j之间气球的分数就等于先戳破i到k和k到j，最后戳破k得到的分数，即`dp[i][j] = max(dp[i][j], dp[i][k]+dp[k][j]+nums[i]*nums[k]*nums[j]`
+
+注意遍历的方向是从左下到右上
+
 # 双指针
 
 ## 最长回文子串
