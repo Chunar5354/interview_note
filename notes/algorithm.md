@@ -117,3 +117,43 @@
 [leetcode 5](https://leetcode.com/problems/longest-palindromic-substring/)
 
 关键在于首先要跳过所有的相等字符
+
+# 位运算
+
+## 数组中有两个只出现一次的数，其余出现两次
+
+[剑指offer 56-1](https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/)
+
+基本原则：`A xor B xor A = B`
+
+所以计算整个数组的异或，结果就是两个只出现一次的数字`A xor B`，假设`A xor B = C`
+
+这时只需要找到一个`在C中为1`的位i（A和B的第i位一定是不同的），就可以将A和B区分开
+
+在数组nums的所有n中，只要第i位是1的就去跟A异或，不是1的就跟B异或，就将问题拆分成了两组`数组中只有一个只出现一次的数`的问题
+
+## 数组中有一只出现一次的数，其余出现三次
+
+[剑指offer 56-2](https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-ii-lcof/)
+
+统计32个数字位，每一个数字位对所有的n计算`与`，然后统计当前位是1的次数，如果那个单独的数字在第i位是0，那这个位计算与后结果为1的次数应该是`3的倍数`
+
+# 贪心
+
+## 割绳子
+
+[剑指offer 14](https://leetcode-cn.com/problems/jian-sheng-zi-lcof/)
+
+分割成1，结果是`1*(n-1)`
+
+分割成2，结果是`2*(n-2)`，比1的情况`1*1*(n-2)`要好
+
+分割成3，结果是`3*(n-3)`，比2的情况`1*2*(n-3)`要好
+
+分割成3，结果是`4*(n-4)`，与分割乘2相同
+
+分割成5，结果是`2*3*(n-5)`
+
+分割成6，结果是`3*3*(n-6)`
+
+所以得到最大值的方式是尽量分割成`3的倍数`
