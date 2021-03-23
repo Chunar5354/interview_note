@@ -16,6 +16,8 @@
 
 - [用户态与内核态、零拷贝](https://github.com/Chunar5354/interview_note/blob/main/notes/user_kernel.md)
 
+- [Python与Go中的协程](https://github.com/Chunar5354/interview_note/blob/main/notes/coroutine.md)
+
 ### 计算机网络
 
 - [三次握手与四次挥手](https://github.com/Chunar5354/interview_note/blob/main/notes/handshake.md)
@@ -32,7 +34,11 @@
 
 - [网络攻击](https://github.com/Chunar5354/interview_note/blob/main/notes/attack.md)
 
+- [网络安全（加密、证书）](https://github.com/Chunar5354/interview_note/blob/main/notes/net_safety.md)
+
 - [各层报文](https://github.com/Chunar5354/interview_note/blob/main/notes/tcp_ip_message.md)
+
+- [DNS](https://github.com/Chunar5354/interview_note/blob/main/notes/dns.md)
 
 ### go语言
 
@@ -57,6 +63,10 @@
 - [B树与B+树](https://github.com/Chunar5354/interview_note/blob/main/notes/b-tree.md)
 
 - [mysql索引](https://github.com/Chunar5354/interview_note/blob/main/notes/mysql_inedx.md)
+
+### Redis
+
+- [Redis数据结构](https://github.com/Chunar5354/interview_note/blob/main/notes/redis_data_structure.md)
 
 ### 算法
 
