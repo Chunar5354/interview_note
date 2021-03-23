@@ -120,6 +120,12 @@
 
 # 位运算
 
+## 不用加减乘除做加法
+
+[剑指offer 65](https://leetcode-cn.com/problems/bu-yong-jia-jian-cheng-chu-zuo-jia-fa-lcof/)
+
+`a^b`是不进位时加法的结果，`(a&b)<<1`是进位，当进位为0时，计算结束
+
 ## 数组中有两个只出现一次的数，其余出现两次
 
 [剑指offer 56-1](https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/)
