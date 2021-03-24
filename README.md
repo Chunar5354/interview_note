@@ -40,13 +40,19 @@
 
 - [DNS](https://github.com/Chunar5354/interview_note/blob/main/notes/dns.md)
 
-### go语言
+### Go语言
 
 - [垃圾回收器](https://github.com/Chunar5354/interview_note/blob/main/notes/gc.md)
 
 - [抢占与伪抢占式调度](https://github.com/Chunar5354/interview_note/blob/main/notes/seize.md)
 
 - [GMP调度器](https://github.com/Chunar5354/interview_note/blob/main/notes/gmp.md)
+
+### Python语言
+
+- [asyncio](https://github.com/Chunar5354/interview_note/blob/main/notes/asyncio.md)
+
+- [yield](https://github.com/Chunar5354/interview_note/blob/main/notes/yield.md)
 
 ### MySQL
 
