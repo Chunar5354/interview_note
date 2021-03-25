@@ -77,3 +77,5 @@
 ### 算法
 
 - [算法题总结](https://github.com/Chunar5354/interview_note/blob/main/notes/algorithm.md)
+
+- [排序算法](https://github.com/Chunar5354/interview_note/blob/main/notes/sort.md)
