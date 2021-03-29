@@ -18,6 +18,8 @@
 
 - [Python与Go中的协程](https://github.com/Chunar5354/interview_note/blob/main/notes/coroutine.md)
 
+- [Linux常用命令](https://github.com/Chunar5354/interview_note/blob/main/notes/linux.md)
+
 ### 计算机网络
 
 - [三次握手与四次挥手](https://github.com/Chunar5354/interview_note/blob/main/notes/handshake.md)
@@ -48,11 +50,14 @@
 
 - [GMP调度器](https://github.com/Chunar5354/interview_note/blob/main/notes/gmp.md)
 
+- [Go中map的实现](https://github.com/Chunar5354/interview_note/blob/main/notes/go_map.md)
+
 ### Python语言
 
 - [asyncio](https://github.com/Chunar5354/interview_note/blob/main/notes/asyncio.md)
 
 - [yield](https://github.com/Chunar5354/interview_note/blob/main/notes/yield.md)
+
 
 ### MySQL
 
@@ -73,6 +78,14 @@
 ### Redis
 
 - [Redis数据结构](https://github.com/Chunar5354/interview_note/blob/main/notes/redis_data_structure.md)
+
+### Docker
+
+- [Docker网络模式](https://github.com/Chunar5354/interview_note/blob/main/notes/docker_network.md)
+
+### 分布式
+
+- [zookeeper](https://github.com/Chunar5354/interview_note/blob/main/notes/zoo.md)
 
 ### 算法
 
