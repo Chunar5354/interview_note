@@ -106,6 +106,8 @@ func (lru *LRUCache) Put(key int, value int)  {
 
 ## LFU
 
+[leetcode 460](https://leetcode.com/problems/lfu-cache/)
+
 [参考](https://cloud.tencent.com/developer/article/1645636)
 
 LFU要复杂一些，因为要为每个节点维护频率属性，在多个频率相同的情况下则要遵循LRU原则
