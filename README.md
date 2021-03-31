@@ -50,6 +50,8 @@
 
 - [GMP调度器](https://github.com/Chunar5354/interview_note/blob/main/notes/gmp.md)
 
+- [Go中数组与切片的实现](https://github.com/Chunar5354/interview_note/blob/main/notes/go_array_and_slice.md)
+
 - [Go中map的实现](https://github.com/Chunar5354/interview_note/blob/main/notes/go_map.md)
 
 ### Python语言
@@ -92,3 +94,5 @@
 - [算法题总结](https://github.com/Chunar5354/interview_note/blob/main/notes/algorithm.md)
 
 - [排序算法](https://github.com/Chunar5354/interview_note/blob/main/notes/sort.md)
+
+- [LRU与LFU](https://github.com/Chunar5354/interview_note/blob/main/notes/lru_and_lfu.md)
