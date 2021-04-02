@@ -42,6 +42,8 @@
 
 - [DNS](https://github.com/Chunar5354/interview_note/blob/main/notes/dns.md)
 
+- [cookie，session与token](https://github.com/Chunar5354/interview_note/blob/main/notes/cookie_session_token.md)
+
 ### Go语言
 
 - [垃圾回收器](https://github.com/Chunar5354/interview_note/blob/main/notes/gc.md)
@@ -88,6 +90,8 @@
 ### 分布式
 
 - [zookeeper](https://github.com/Chunar5354/interview_note/blob/main/notes/zoo.md)
+
+- [CDN](https://github.com/Chunar5354/interview_note/blob/main/notes/cdn.md)
 
 ### 算法
 
