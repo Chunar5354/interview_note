@@ -83,11 +83,31 @@
 
 - [Redis数据结构](https://github.com/Chunar5354/interview_note/blob/main/notes/redis_data_structure.md)
 
+- [Redis分布式锁](https://github.com/Chunar5354/interview_note/blob/main/notes/redis_distribute_lock.md)
+
+- [Redis持久化](https://github.com/Chunar5354/interview_note/blob/main/notes/redis_endurance.md)
+
+- [Redis内存淘汰策略](https://github.com/Chunar5354/interview_note/blob/main/notes/redis_mem_eviction_policy.md)
+
+- [Redis哨兵机制](https://github.com/Chunar5354/interview_note/blob/main/notes/redis_sentinel.md)
+
+- [Redis单线程模型](https://github.com/Chunar5354/interview_note/blob/main/notes/redis_single_thread.md)
+
+### 缓存
+
+- [缓存的常见问题](https://github.com/Chunar5354/interview_note/blob/main/notes/mem.md)
+
+- [布隆过滤器](https://github.com/Chunar5354/interview_note/blob/main/notes/bloom.md)
+
 ### Docker
 
 - [Docker网络模式](https://github.com/Chunar5354/interview_note/blob/main/notes/docker_network.md)
 
+- [Docker第层隔离原理](https://github.com/Chunar5354/interview_note/blob/main/notes/docker_principle.md)
+
 ### 分布式
+
+- [CAP定理](https://github.com/Chunar5354/interview_note/blob/main/notes/cap.md)
 
 - [zookeeper](https://github.com/Chunar5354/interview_note/blob/main/notes/zoo.md)
 
