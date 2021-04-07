@@ -24,7 +24,7 @@
 
 - 303 See Other，所请求的资源有另一个URI，并让客户端使用`GET`方法访问新的URI
 
-- 304 Not Modified，表示客户端发送带有条件的请求时，服务端允许访问资源，但`不满足条件`
+- 304 Not Modified，告诉客户端使用`缓存`即可
 
 - 307 Temporary Redirect，与302意义相同，但是不从POST变成GET
 

@@ -1,8 +1,8 @@
-Redis数据类型
+## Redis数据类型
 
 Redis有5中基础数据类型
 
-## STRING
+### STRING
 
 STRING可以存储字符串、整数或浮点数
 
@@ -45,7 +45,7 @@ OK
 2.1
 ```
 
-## LIST
+### LIST
 
 LIST是一个双向的列表，可以从两边向其中添加和删除元素，以及范围操作
 
@@ -90,7 +90,7 @@ LIST是一个双向的列表，可以从两边向其中添加和删除元素，�
 (integer) 1
 ```
 
-## SET
+### SET
 
 SET是无序集合，可以添加、获取单个元素，计算交集、并集等
 
@@ -149,7 +149,7 @@ SET是无序集合，可以添加、获取单个元素，计算交集、并集�
 3) "e"
 ```
 
-## ZSET
+### ZSET
 
 ZSET是有序集合，在ZSET中每个元素都有一个`score`字段用来排序
 
@@ -182,7 +182,7 @@ ZADD hackers 1912 "Alan Turing"
 1
 ```
 
-## HASH
+### HASH
 
 HASH的元素是键值对
 
@@ -217,3 +217,41 @@ HASH的元素是键值对
 3) "password"
 4) "s3cret"
 ```
+
+## 底层数据结构
+
+几种数据类型的底层实现
+
+### STRING
+
+整性int，简单动态字符串（embstr，raw）
+
+小于`39字节`的字符串用embstr编码，大于39字节用raw编码
+
+embstr申请的内存是`连续`的，raw不一定
+
+### LIST
+
+快速列表quicklist，由压缩列表和双向链表组成
+
+元素较少的时候压缩列表是`顺序IO`
+
+### SET
+
+整数集合intset，哈希表hashtable
+
+### ZSET
+
+压缩列表ziplist，跳表skiplist
+
+### HASH
+
+哈希表，压缩列表
+
+## 跳表
+
+跳表是在普通的链表基础上加了`索引层`，从而优化了查找操作，达到类似二分查找的`O(log(n))`时间复杂度
+
+[![c3h5Mn.png](https://z3.ax1x.com/2021/04/07/c3h5Mn.png)](https://imgtu.com/i/c3h5Mn)
+
+Redis中跳表是一个`双向链表`，且新建节点的时候`层数是随机的`
