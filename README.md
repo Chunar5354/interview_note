@@ -20,6 +20,8 @@
 
 - [Linux常用命令](https://github.com/Chunar5354/interview_note/blob/main/notes/linux.md)
 
+- [IO多路复用](https://github.com/Chunar5354/interview_note/blob/main/notes/io_multiplexing.md)
+
 ### 计算机网络
 
 - [三次握手与四次挥手](https://github.com/Chunar5354/interview_note/blob/main/notes/handshake.md)
