@@ -32,6 +32,8 @@
 
 - [TCP拥塞控制](https://github.com/Chunar5354/interview_note/blob/main/notes/tcp_block.md)
 
+- [TCP中close与shutdown的区别](https://github.com/Chunar5354/interview_note/blob/main/notes/tcp_close_shutdown.md)
+
 - [HTTP状态码](https://github.com/Chunar5354/interview_note/blob/main/notes/httpStatus.md)
 
 - [HTTP版本差异](https://github.com/Chunar5354/interview_note/blob/main/notes/http_version.md)
@@ -58,6 +60,8 @@
 
 - [Go中map的实现](https://github.com/Chunar5354/interview_note/blob/main/notes/go_map.md)
 
+- [Go中channel的实现](https://github.com/Chunar5354/interview_note/blob/main/notes/go_channel.md)
+
 ### Python语言
 
 - [asyncio](https://github.com/Chunar5354/interview_note/blob/main/notes/asyncio.md)
@@ -80,6 +84,8 @@
 - [B树与B+树](https://github.com/Chunar5354/interview_note/blob/main/notes/b-tree.md)
 
 - [mysql索引](https://github.com/Chunar5354/interview_note/blob/main/notes/mysql_inedx.md)
+
+- [乐观锁，悲观锁，共享锁，排他锁](https://github.com/Chunar5354/interview_note/blob/main/notes/locks.md)
 
 ### Redis
 
@@ -114,6 +120,12 @@
 - [zookeeper](https://github.com/Chunar5354/interview_note/blob/main/notes/zoo.md)
 
 - [CDN](https://github.com/Chunar5354/interview_note/blob/main/notes/cdn.md)
+
+- [一致性hash](https://github.com/Chunar5354/interview_note/blob/main/notes/consistent_hash.md)
+
+- [分布式事务](https://github.com/Chunar5354/interview_note/blob/main/notes/distribute_transaction.md)
+
+- [Raft算法](https://github.com/Chunar5354/interview_note/blob/main/notes/raft.md)
 
 ### 算法
 
