@@ -62,6 +62,8 @@
 
 - [Go中channel的实现](https://github.com/Chunar5354/interview_note/blob/main/notes/go_channel.md)
 
+- [Go中锁的底层实现](https://github.com/Chunar5354/interview_note/blob/main/notes/go_lock.md)
+
 ### Python语言
 
 - [asyncio](https://github.com/Chunar5354/interview_note/blob/main/notes/asyncio.md)
