@@ -39,7 +39,7 @@ type hchan struct {
 }
 ```
 
-起哄recvq和sendq的数据结构是`runtime.waitq`，它包含一个双向链表的头和尾节点指针
+其中recvq和sendq的数据结构是`runtime.waitq`，它包含一个双向链表的头和尾节点指针
 
 ```go
 type waitq struct {
