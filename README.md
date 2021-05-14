@@ -22,6 +22,8 @@
 
 - [IO多路复用](https://github.com/Chunar5354/interview_note/blob/main/notes/io_multiplexing.md)
 
+- [free命令详解，buffer与cache的区别](https://github.com/Chunar5354/interview_note/blob/main/notes/buffer_cache.md)
+
 ### 计算机网络
 
 - [三次握手与四次挥手](https://github.com/Chunar5354/interview_note/blob/main/notes/handshake.md)
