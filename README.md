@@ -24,6 +24,10 @@
 
 - [free命令详解，buffer与cache的区别](https://github.com/Chunar5354/interview_note/blob/main/notes/buffer_cache.md)
 
+- [lsof命令详解](https://github.com/Chunar5354/interview_note/blob/main/notes/lsof.md)
+
+- [管道命令](https://github.com/Chunar5354/interview_note/blob/main/notes/pipe.md)
+
 ### 计算机网络
 
 - [三次握手与四次挥手](https://github.com/Chunar5354/interview_note/blob/main/notes/handshake.md)
