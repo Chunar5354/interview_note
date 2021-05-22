@@ -14,10 +14,14 @@ TCP连接有以下几种状态
 
 - CLOSE_WAIT：接收方收到FIN并回复完ACK，到发送自己的FIN`之间`
 
-- FIN-WAIT-2：发送方接收到ACK，等待FIN
+- FIN-WAIT-2：接收方接收到ACK，等待FIN
 
 - LAST-ACK：接收方发送完FIN，等待ACK
 
 - TIME_WAIT：发送方发送完最后的ACK之后
 
 - CLOSE：连接关闭
+
+在整个TCP通信过程中各个状态如下图所示，其中黄字表示在socket编程时对应的方法
+
+[![gLcO78.png](https://z3.ax1x.com/2021/05/22/gLcO78.png)](https://imgtu.com/i/gLcO78)
