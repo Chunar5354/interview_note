@@ -10,6 +10,8 @@
 
 ### 操作系统
 
+- [原码，反码与补码](https://github.com/Chunar5354/interview_note/blob/main/notes/integer-coding.md)
+
 - [物理内存与虚拟内存](https://github.com/Chunar5354/interview_note/blob/main/notes/memory.md)
 
 - [阻塞与非阻塞](https://github.com/Chunar5354/interview_note/blob/main/notes/block.md)
