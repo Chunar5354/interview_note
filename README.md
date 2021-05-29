@@ -30,6 +30,8 @@
 
 - [管道命令](https://github.com/Chunar5354/interview_note/blob/main/notes/pipe.md)
 
+- [sed与awk处理文档](https://github.com/Chunar5354/interview_note/blob/main/notes/sed_awk.md)
+
 ### 计算机网络
 
 - [三次握手与四次挥手](https://github.com/Chunar5354/interview_note/blob/main/notes/handshake.md)
