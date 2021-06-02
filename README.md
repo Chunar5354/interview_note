@@ -32,6 +32,8 @@
 
 - [sed与awk处理文档](https://github.com/Chunar5354/interview_note/blob/main/notes/sed_awk.md)
 
+- [shell脚本](https://github.com/Chunar5354/interview_note/blob/main/notes/shell_script.md)
+
 ### 计算机网络
 
 - [三次握手与四次挥手](https://github.com/Chunar5354/interview_note/blob/main/notes/handshake.md)
