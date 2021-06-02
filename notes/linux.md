@@ -141,6 +141,87 @@ top输出中`load average`的含义：在过去1分钟、5分钟和15分钟内�
 
 如`load average: 0.12 0.22 0.13`表示过去一分钟内在CPU运行或等待运行的`平均进程数`，以此类推，每个CPU同时只能运行一个进程，所以当数字`超过CPU核数`时，说明系统负载过高（通常为核心数*0.7以下）
 
+### 查看IO
+
+#### vmstat
+
+使用方法：
+
+```
+vmstat n1(几秒输出一次) n2(一个输出几次)
+```
+
+```
+$ vmstat
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 4  0      0 192484  56624 473144    0    0    91    36    7    4  1  1 98  0  0
+```
+
+参数：
+
+- `r`，等待运行的进程数
+
+- `b`，非中断状态睡眠的进程数
+
+- `swpd`，交换区内存使用情况（KB）
+
+- `free`，可用内存（KB）
+
+- `buff`，缓冲区内存（KB）
+
+- `cache`，缓存区内存（KB）
+
+- `si`，从磁盘交换到内存的数量（KB/s）
+
+- `so`，从内存交换到硬盘的数量（KB/s）
+
+- `bi`，发送到块设备的块数（块/s）
+
+- `bo`，从块设备接受的块数（块/s）
+
+- `in`，每秒中断数
+
+- `cs`，每秒上下文切换数
+
+- `us`，CPU使用率（%）
+
+- `sy`，内核占用CPU（%）
+
+- `id`，可用CPU（%）
+
+- `wa`，等待IO的CPU占用（%）
+
+块大小默认是`4096字节`，可以通过stat命令查看：
+
+```
+$ stat -f / | grep block
+Block size: 4096       Fundamental block size: 4096
+```
+
+#### iostat
+
+iostat属于sysstat，需要先安装：
+
+```
+$ spt-get install sysstat
+```
+
+会输出CPU和硬盘读写信息：
+
+```
+$ iostat -h
+Linux 4.19.0-11-amd64 (VM-4-10-debian) 	06/02/2021 	_x86_64_	(1 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           1.1%    0.0%    0.8%    0.1%    0.0%   98.0%
+
+      tps    kB_read/s    kB_wrtn/s    kB_read    kB_wrtn Device
+     4.09        90.3k        35.6k     372.2G     146.6G vda
+     0.00         0.0k         0.0k       1.1M       0.0k scd0
+     0.00         0.0k         0.0k     482.0k       0.0k loop0
+```
+
 ### 查看系统日志
 
 ```
@@ -304,3 +385,169 @@ option值：years年，months月，weeks周，days天，hours小时，minutes分
 
 - `-s`设定系统时间为指定字符串
 
+
+### 查看进程状态
+
+`ps`(process status)命令
+
+常用方法：
+
+- `-ef`，显示所有进程信息，连同命令行，常与grep结合使用，用于根据程序查找进程
+
+示例：
+
+```
+$ ps -ef | grep mysqld
+chunar    3094 22690  0 21:39 pts/1    00:00:00 grep mysqld
+systemd+ 21368 21274  0 May27 ?        00:10:24 mysqld
+```
+- `aux`，列出当前正在内存中的进程，显示CPU占用，内存占用以及进程状态等信息
+
+示例：
+
+```
+$ ps aux | head -n 3
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.3 170792  6328 ?        Ss   Apr13   4:27 /lib/systemd/systemd --system --deserialize 20
+root         2  0.0  0.0      0     0 ?        S    Apr13   0:02 [kthreadd]
+```
+
+各字段含义：
+
+1.USER，进程属于的用户
+
+2.PID，进程号
+
+3.%CPU，CPU占用率
+
+4.%MEM，内存占用率
+
+5.VZS，虚拟内存占用量（K）
+
+6.RSS，占用的固定内存量（k）
+
+7.TTY，在哪个中断机上运行，与终端无关则显示`?`，tty1-tty6表示在本机运行，若为`pts`则为远程登陆
+
+8.STAT，状态，主要有几种：`R`正运行或就绪，`S`睡眠状态，需要被signal唤醒，`T`停止，`Z`僵尸状态
+
+9.START，该进程的启动时间
+
+10.TIME，进程在CPU上运作的时间
+
+11.COMMAND，运行程序的指令
+
+通过aux，可以实现根据CPU或内存占用率排序进程：
+
+- 通过CPU占用率排序
+
+```
+$ ps aux --sort=-pcpu | head -n 4
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root      6002  0.2  4.6 1013092 88860 ?       Sl   Apr27 126:03 /usr/local/qcloud/YunJing/YDEyes/YDService
+root     27847  0.2  0.6 624004 13340 ?        Sl   May16  65:23 barad_agent
+root      6026  0.1  1.0 633456 19548 ?        Sl   Apr27  53:58 /usr/local/qcloud/YunJing/YDEdr
+```
+
+`--sort`指定按哪一列来排序，使用p来代替%，同时按递减顺序排序需要取负数：`--sort=-pcpu`
+
+- 通过内存占用率排序
+
+```
+$ ps aux --sort=-pmem | head -n 4
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+systemd+ 21368  0.1 21.2 1281248 406232 ?      Ssl  May27  11:18 mysqld
+root      6002  0.2  4.6 1013356 89148 ?       Sl   Apr27 126:03 /usr/local/qcloud/YunJing/YDEyes/YDService
+root      9916  0.1  4.4 978000 85764 ?        Ssl  May11  44:57 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+```
+
+- `-eo`指定要输出的列
+
+示例
+
+```
+$ ps -eo user,pcpu,pmem,stat --sort=-pmem | head -n 4
+USER     %CPU %MEM STAT
+systemd+  0.1 21.2 Ssl
+root      0.2  4.6 Sl
+root      0.1  4.4 Ssl
+```
+
+注意选择多个列时中间不能有空格
+
+
+### 排序
+
+通过`sort`命令来对文本每一行排序，可以指定多种排序形式，以`testfile`为例：
+
+```
+1-22-333 4 2
+3-33-444 3 12
+2-11-222 2 13
+4-44-111 1 3
+```
+
+默认按照每行第一个字符的字典序排序：
+
+```
+$ cat testfile | sort
+1-22-333 4 2
+2-11-222 2 13
+3-33-444 3 12
+4-44-111 1 3
+```
+
+- `-r`倒序
+
+```
+$ cat testfile | sort -r
+4-44-111 1 3
+3-33-444 3 12
+2-11-222 2 13
+1-22-333 4 2
+```
+
+- `-k`，默认以tab或空格为分隔符，指定按照第几个元素排序
+
+```
+$ cat testfile | sort -k2
+4-44-111 1 3
+2-11-222 2 13
+3-33-444 3 12
+1-22-333 4 2
+```
+
+`-k2`指定以第二列（1, 2, 3, 4那一列)排序
+
+- `-t`指定分隔符
+
+```
+$ cat testfile | sort -t'-' -k2
+2-11-222 2 13
+1-22-333 4 2
+3-33-444 3 12
+4-44-111 1 3
+```
+
+指定'-'为分隔符，第二列变成了11, 22, 33, 44那一列
+
+- `-n`按照数字大小排序，而不是字典序
+
+若直接按照最后一列排序，12与13排在2和3的前面：
+
+```
+$ cat testfile | sort -k3
+3-33-444 3 12
+2-11-222 2 13
+1-22-333 4 2
+4-44-111 1 3
+```
+
+指定`-n`：
+
+```
+$ cat testfile | sort -k3 -n
+1-22-333 4 2
+4-44-111 1 3
+3-33-444 3 12
+2-11-222 2 13
+```
