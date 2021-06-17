@@ -12,6 +12,8 @@
 
 - [原码，反码与补码](https://github.com/Chunar5354/interview_note/blob/main/notes/integer-coding.md)
 
+- [浮点数的精度问题](https://github.com/Chunar5354/interview_note/blob/main/notes/float.md)
+
 - [物理内存与虚拟内存](https://github.com/Chunar5354/interview_note/blob/main/notes/memory.md)
 
 - [阻塞与非阻塞](https://github.com/Chunar5354/interview_note/blob/main/notes/block.md)
@@ -125,7 +127,7 @@
 
 - [Docker网络模式](https://github.com/Chunar5354/interview_note/blob/main/notes/docker_network.md)
 
-- [Docker第层隔离原理](https://github.com/Chunar5354/interview_note/blob/main/notes/docker_principle.md)
+- [Docker底层原理浅析](https://github.com/Chunar5354/interview_note/blob/main/notes/docker_principle.md)
 
 ### 分布式
 
