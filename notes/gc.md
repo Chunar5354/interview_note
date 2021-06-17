@@ -1,3 +1,5 @@
+[参考](https://draveness.me/golang/docs/part3-runtime/ch07-memory/golang-garbage-collector/)
+
 ## 内存管理
 
 C，C++和Rust等语言使用手动方式管理内存
