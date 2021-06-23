@@ -14,6 +14,8 @@
 
 - [浮点数的精度问题](https://github.com/Chunar5354/interview_note/blob/main/notes/float.md)
 
+- [Unicode编码](https://github.com/Chunar5354/interview_note/blob/main/notes/unicode.md)
+
 - [物理内存与虚拟内存](https://github.com/Chunar5354/interview_note/blob/main/notes/memory.md)
 
 - [阻塞与非阻塞](https://github.com/Chunar5354/interview_note/blob/main/notes/block.md)
@@ -62,6 +64,8 @@
 
 - [cookie，session与token](https://github.com/Chunar5354/interview_note/blob/main/notes/cookie_session_token.md)
 
+- [ARP协议](https://github.com/Chunar5354/interview_note/blob/main/notes/arp.md)
+
 ### Go语言
 
 - [垃圾回收器](https://github.com/Chunar5354/interview_note/blob/main/notes/gc.md)
@@ -84,7 +88,6 @@
 
 - [yield](https://github.com/Chunar5354/interview_note/blob/main/notes/yield.md)
 
-
 ### MySQL
 
 - [mysql语句练习笔记](https://github.com/Chunar5354/interview_note/blob/main/notes/mysqlNote.md)
@@ -100,6 +103,8 @@
 - [B树与B+树](https://github.com/Chunar5354/interview_note/blob/main/notes/b-tree.md)
 
 - [mysql索引](https://github.com/Chunar5354/interview_note/blob/main/notes/mysql_inedx.md)
+
+- [explain详解](https://github.com/Chunar5354/interview_note/blob/main/notes/mysql-explain.md)
 
 - [乐观锁，悲观锁，共享锁，排他锁](https://github.com/Chunar5354/interview_note/blob/main/notes/locks.md)
 
@@ -150,3 +155,7 @@
 - [排序算法](https://github.com/Chunar5354/interview_note/blob/main/notes/sort.md)
 
 - [LRU与LFU](https://github.com/Chunar5354/interview_note/blob/main/notes/lru_and_lfu.md)
+
+### 设计模式
+
+- [几个简单的设计模式](https://github.com/Chunar5354/interview_note/blob/main/notes/design_mode.md)
