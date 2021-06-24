@@ -82,6 +82,8 @@
 
 - [Go中锁的底层实现](https://github.com/Chunar5354/interview_note/blob/main/notes/go_lock.md)
 
+- [Go内存分配机制](https://github.com/Chunar5354/interview_note/blob/main/notes/memory_allocate.md)
+
 ### Python语言
 
 - [asyncio](https://github.com/Chunar5354/interview_note/blob/main/notes/asyncio.md)
@@ -95,6 +97,8 @@
 - [mysql范式](https://github.com/Chunar5354/interview_note/blob/main/notes/paradigm.md)
 
 - [mysql事务特性及隔离级别](https://github.com/Chunar5354/interview_note/blob/main/notes/acid.md)
+
+- [MVCC](https://github.com/Chunar5354/interview_note/blob/main/notes/mvcc.md)
 
 - [mysql日志](https://github.com/Chunar5354/interview_note/blob/main/notes/mysql_log.md)
 
@@ -147,6 +151,8 @@
 - [分布式事务](https://github.com/Chunar5354/interview_note/blob/main/notes/distribute_transaction.md)
 
 - [Raft算法](https://github.com/Chunar5354/interview_note/blob/main/notes/raft.md)
+
+- [负载均衡](https://github.com/Chunar5354/interview_note/blob/main/notes/load_balance.md)
 
 ### 算法
 
