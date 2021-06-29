@@ -84,6 +84,12 @@
 
 - [Go内存分配机制](https://github.com/Chunar5354/interview_note/blob/main/notes/memory_allocate.md)
 
+- [上下文context](https://github.com/Chunar5354/interview_note/blob/main/notes/go-context.md)
+
+- [反射](https://github.com/Chunar5354/interview_note/blob/main/notes/go-reflect.md)
+
+- [字符串类型](https://github.com/Chunar5354/interview_note/blob/main/notes/go-string.md)
+
 ### Python语言
 
 - [asyncio](https://github.com/Chunar5354/interview_note/blob/main/notes/asyncio.md)
