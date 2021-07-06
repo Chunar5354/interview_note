@@ -22,7 +22,9 @@
 
 - [用户态与内核态、零拷贝](https://github.com/Chunar5354/interview_note/blob/main/notes/user_kernel.md)
 
-- [Python与Go中的协程](https://github.com/Chunar5354/interview_note/blob/main/notes/coroutine.md)
+- [进程、线程与协程](https://github.com/Chunar5354/interview_note/blob/main/notes/coroutine.md)
+
+- [一个程序从源代码到执行的过程](https://github.com/Chunar5354/interview_note/blob/main/notes/compile.md)
 
 - [Linux常用命令](https://github.com/Chunar5354/interview_note/blob/main/notes/linux.md)
 
@@ -95,6 +97,8 @@
 - [asyncio](https://github.com/Chunar5354/interview_note/blob/main/notes/asyncio.md)
 
 - [yield](https://github.com/Chunar5354/interview_note/blob/main/notes/yield.md)
+
+- [装饰器](https://github.com/Chunar5354/interview_note/blob/main/notes/decorator.md)
 
 ### MySQL
 
