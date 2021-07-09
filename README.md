@@ -24,6 +24,8 @@
 
 - [进程、线程与协程](https://github.com/Chunar5354/interview_note/blob/main/notes/coroutine.md)
 
+- [死锁问题](https://github.com/Chunar5354/interview_note/blob/main/notes/deadlock.md)
+
 - [一个程序从源代码到执行的过程](https://github.com/Chunar5354/interview_note/blob/main/notes/compile.md)
 
 - [Linux常用命令](https://github.com/Chunar5354/interview_note/blob/main/notes/linux.md)
@@ -84,6 +86,8 @@
 
 - [Go中锁的底层实现](https://github.com/Chunar5354/interview_note/blob/main/notes/go_lock.md)
 
+- [Go中interface的底层实现](https://github.com/Chunar5354/interview_note/blob/main/notes/go-interface.md)
+
 - [Go内存分配机制](https://github.com/Chunar5354/interview_note/blob/main/notes/memory_allocate.md)
 
 - [上下文context](https://github.com/Chunar5354/interview_note/blob/main/notes/go-context.md)
@@ -131,6 +135,8 @@
 - [Redis持久化](https://github.com/Chunar5354/interview_note/blob/main/notes/redis_endurance.md)
 
 - [Redis内存淘汰策略](https://github.com/Chunar5354/interview_note/blob/main/notes/redis_mem_eviction_policy.md)
+
+- [Redis集群](https://github.com/Chunar5354/interview_note/blob/main/notes/redis-cluster.md)
 
 - [Redis哨兵机制](https://github.com/Chunar5354/interview_note/blob/main/notes/redis_sentinel.md)
 
