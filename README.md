@@ -18,11 +18,15 @@
 
 - [物理内存与虚拟内存](https://github.com/Chunar5354/interview_note/blob/main/notes/memory.md)
 
+- [内存布局](https://github.com/Chunar5354/interview_note/blob/main/notes/memory_space.md)
+
 - [阻塞与非阻塞](https://github.com/Chunar5354/interview_note/blob/main/notes/block.md)
 
 - [用户态与内核态、零拷贝](https://github.com/Chunar5354/interview_note/blob/main/notes/user_kernel.md)
 
 - [进程、线程与协程](https://github.com/Chunar5354/interview_note/blob/main/notes/coroutine.md)
+
+- [进程状态](https://github.com/Chunar5354/interview_note/blob/main/notes/process_status.md)
 
 - [死锁问题](https://github.com/Chunar5354/interview_note/blob/main/notes/deadlock.md)
 
