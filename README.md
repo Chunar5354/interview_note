@@ -22,6 +22,8 @@
 
 - [阻塞与非阻塞](https://github.com/Chunar5354/interview_note/blob/main/notes/block.md)
 
+- [阻塞与调度的原因](https://github.com/Chunar5354/interview_note/blob/main/notes/block_schedule.md)
+
 - [用户态与内核态、零拷贝](https://github.com/Chunar5354/interview_note/blob/main/notes/user_kernel.md)
 
 - [进程、线程与协程](https://github.com/Chunar5354/interview_note/blob/main/notes/coroutine.md)
@@ -130,6 +132,8 @@
 
 - [乐观锁，悲观锁，共享锁，排他锁](https://github.com/Chunar5354/interview_note/blob/main/notes/locks.md)
 
+- [mysql中的锁类型](https://github.com/Chunar5354/interview_note/blob/main/notes/mysql_lock.md)
+
 ### Redis
 
 - [Redis数据结构](https://github.com/Chunar5354/interview_note/blob/main/notes/redis_data_structure.md)
@@ -185,3 +189,5 @@
 ### 设计模式
 
 - [几个简单的设计模式](https://github.com/Chunar5354/interview_note/blob/main/notes/design_mode.md)
+
+- [面向对象设计原则](https://github.com/Chunar5354/interview_note/blob/main/notes/oop_design.md)
