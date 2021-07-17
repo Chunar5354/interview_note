@@ -134,6 +134,8 @@
 
 - [mysql中的锁类型](https://github.com/Chunar5354/interview_note/blob/main/notes/mysql_lock.md)
 
+- [change buffer缓冲](https://github.com/Chunar5354/interview_note/blob/main/notes/mysql_change_buffer.md)
+
 ### Redis
 
 - [Redis数据结构](https://github.com/Chunar5354/interview_note/blob/main/notes/redis_data_structure.md)
