@@ -12,7 +12,9 @@ mysql的日志共有6大种：错误日志，二进制日志，事务日志，�
 
 事务日志是innodb独有的日志，包括重做日志redo log和回滚日志undo log
 
-- 重做日志
+### redo log
+
+重做日志
 
 文件名`*.ib_logfile`
 
@@ -20,7 +22,27 @@ mysql的日志共有6大种：错误日志，二进制日志，事务日志，�
 
 redo log只记录对数据页做了哪些修改，所以它的`体积更小`，每次刷写不用对整个页操作，而且是`顺序IO`
 
-- 回滚日志
+#### 刷盘策略
+
+redo log的刷盘有三个级别：mysql内部的`redo log buffer`，磁盘的`page cache`和`磁盘`
+
+innodb有一个后台线程，`每秒钟一次`调用write将redo log buffer写入page cache，然后调用fsync持久化到磁盘
+
+通过`innodb_flush_log_at_trx_commit`参数来控制，有三种情况：
+
+- 1.值为0，每次事务提交只把redo log写到`redo log buffer`（延迟写）
+
+- 2.值为1，每次事务提交都把redo log直接持久化到`磁盘`（实时写，实时刷）
+
+- 3.值为2，每次事务提交只把redo log写到`page cache`（实时写，延迟刷）
+
+#### 组提交
+
+redo log之所以能提高IO性能，一个是因为它是顺序写，二是它可以采用组提交的方式，`一次性写入多个事务`
+
+### undo log
+
+回滚日志
 
 文件名`*.ibdata`
 
@@ -35,6 +57,14 @@ undo log是逻辑日志，记录的是与当前操作相反的操作，如执行
 主要在`备份`和`主从复制`场景中应用
 
 二进制日志对所有操作进行记录，所以会影响性能，默认是`关闭的`
+
+执行流程：
+
+- 1.事务执行过程中，把日志写到binlog cache
+
+- 2.事务提交时，把binlog cache写到binlog文件中
+
+一个事务的binlog必须`一次性写入`，如果事务很大，超过了binlog cache的范围，就要暂存到磁盘
 
 ### binlog的模式
 
@@ -64,6 +94,14 @@ show global variables like '%binlog_format%'
 
 自动模式，会根据执行的具体sql语句来自动选择Row或Statement模式
 
+### 刷盘策略
+
+通过`sync_binlog`参数来配置刷写策略，有两种情况：
+
+- 1.值为`0`，每次提交事务都只write到page cache中，然后依赖操作系统来刷写binlog，而不是mysql主动操作
+
+- 2.值为`N(N>0)`，每次提交事务都write，每`写N次`page cache，就调用一次`fdatasync()`进行刷写
+
 ## 慢查询日志 Slow query log
 
 文件名`hostname-slow.log`
@@ -86,16 +124,6 @@ show global variables like '%binlog_format%'
 
 ## 日志刷写到磁盘的策略
 
-为了保证事务的持久性，应该将日志持久化到磁盘上，以innodb引擎为例，在事务commit之后：
-
-- 1.写入binlog
-
-- 2.写入redolog
-
-- 3.决定这两个日志是否刷写到磁盘（调用fsync)
-
-- 4.commit完成
-
 主要通过两个参数`innodb_flush_log_at_trx_commit`（redolog）和`sync_binlog`（binlog）两个参数来配置刷写策略
 
 对于redolog，innodb_flush_log_at_trx_commit的配置有三种：
@@ -116,9 +144,8 @@ show global variables like '%binlog_format%'
 
 ubdo log, redo log与binlog的写入顺序如下图所示
 
-要注意redo log的`两阶段提交`，commit之后redo log才是可用的，在commit之前，如果binlog已经写入，则可以根据binlog恢复出redo log
+要注意redo log的`两阶段提交`，commit之后redo log才是可用的，在commit之前，如果binlog已经写入，则可以根据binlog恢复数据
 
-同理也可以根据redo log恢复出undo log
 
 图中黄色表示在执行器中执行的操作，白色表示在存储引擎中执行的操作
 
