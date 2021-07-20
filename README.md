@@ -136,6 +136,8 @@
 
 - [change buffer缓冲](https://github.com/Chunar5354/interview_note/blob/main/notes/mysql_change_buffer.md)
 
+- [主备复制问题](https://github.com/Chunar5354/interview_note/blob/main/notes/mysql_ms.md)
+
 ### Redis
 
 - [Redis数据结构](https://github.com/Chunar5354/interview_note/blob/main/notes/redis_data_structure.md)
