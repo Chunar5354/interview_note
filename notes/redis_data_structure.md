@@ -220,7 +220,11 @@ HASH的元素是键值对
 
 ## 底层数据结构
 
-几种数据类型的底层实现
+再redis-cli中，可以通过下面的命令来查看某个key的底层数据类型
+
+```
+object encoding key
+```
 
 ### STRING
 
