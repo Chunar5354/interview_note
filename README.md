@@ -64,6 +64,8 @@
 
 - [HTTP版本差异](https://github.com/Chunar5354/interview_note/blob/main/notes/http_version.md)
 
+- [浏览器的缓存机制](https://github.com/Chunar5354/interview_note/blob/main/notes/browser_cache.md)
+
 - [网络攻击](https://github.com/Chunar5354/interview_note/blob/main/notes/attack.md)
 
 - [网络安全（加密、证书）](https://github.com/Chunar5354/interview_note/blob/main/notes/net_safety.md)
@@ -109,6 +111,8 @@
 - [yield](https://github.com/Chunar5354/interview_note/blob/main/notes/yield.md)
 
 - [装饰器](https://github.com/Chunar5354/interview_note/blob/main/notes/decorator.md)
+
+- [垃圾回收](https://github.com/Chunar5354/interview_note/blob/main/notes/python_gc.md)
 
 ### MySQL
 
