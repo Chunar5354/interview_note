@@ -182,6 +182,12 @@ ZADD hackers 1912 "Alan Turing"
 1
 ```
 
+#### 数据结构
+
+在数据量较少的时候，使用`ziplist`
+
+数据量多的时候使用`dict+skiplist`，其中dict存储member到score的映射，skiplist用来根据score范围查询
+
 ### HASH
 
 HASH的元素是键值对
@@ -252,10 +258,36 @@ embstr申请的内存是`连续`的，raw不一定
 
 哈希表，压缩列表
 
-## 跳表
+## skiplist
 
 跳表是在普通的链表基础上加了`索引层`，从而优化了查找操作，达到类似二分查找的`O(log(n))`时间复杂度
 
 [![c3h5Mn.png](https://z3.ax1x.com/2021/04/07/c3h5Mn.png)](https://imgtu.com/i/c3h5Mn)
 
 Redis中跳表是一个`双向链表`，且新建节点的时候`层数是随机的`
+
+## ziplist
+
+ziplist是特殊编码的`双向链表`，并且使用`连续内存`来存储
+
+ziplist包含以下元素：
+
+- 1.zlbytes，32位，表示ziplist占用的总字节数
+
+- 2.zltail，32位，表示最后一个节点在ziplist的偏移量（方便定位最后一个节点）
+
+- 3.zllen，16位，表示ziplist中节点（entry）的个数
+
+- 4.entry，真正存放的数据项，长度不定
+
+- 5.zlend，1字节，值为255结束标志位
+
+每个节点(entry)的数据结构：
+
+- 1.pre_entry_length，前一个节点的长度，如果大于254字节，pre_entry_length字段就是1字节，否则5字节（1字节存254，后4字节表示实际长度）
+
+- 2.encoding，2位，00，01或10表示类型为`字符数组`（字符串），11表示类型为`整数`
+
+- 3.length，存储的数据的长度
+
+- 4.content，节点中存储数据的实际内容
