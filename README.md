@@ -30,6 +30,8 @@
 
 - [进程状态](https://github.com/Chunar5354/interview_note/blob/main/notes/process_status.md)
 
+- [文件系统](https://github.com/Chunar5354/interview_note/blob/main/notes/file_system.md)
+
 - [死锁问题](https://github.com/Chunar5354/interview_note/blob/main/notes/deadlock.md)
 
 - [一个程序从源代码到执行的过程](https://github.com/Chunar5354/interview_note/blob/main/notes/compile.md)
