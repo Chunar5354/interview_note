@@ -16,7 +16,7 @@
 
 - [Unicode编码](https://github.com/Chunar5354/interview_note/blob/main/notes/unicode.md)
 
-- [大端法小端法](https://github.com/Chunar5354/interview_note/blob/main/notes/big_little.md_
+- [大端法小端法](https://github.com/Chunar5354/interview_note/blob/main/notes/big_little.md)
 
 - [物理内存与虚拟内存](https://github.com/Chunar5354/interview_note/blob/main/notes/memory.md)
 
