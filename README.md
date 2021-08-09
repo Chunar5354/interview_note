@@ -6,6 +6,10 @@
 
 - [爬取面经并统计](https://github.com/Chunar5354/interview_note/tree/main/experience)
 
+## 常见问题
+
+- [面试常见问题以及小知识点](https://github.com/Chunar5354/interview_note/blob/main/notes/commenly_question.md)
+
 ## 知识点
 
 ### 操作系统
