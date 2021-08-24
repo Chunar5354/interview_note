@@ -242,13 +242,13 @@ embstr申请的内存是`连续`的，raw不一定
 
 ### LIST
 
-快速列表quicklist，由压缩列表和双向链表组成
+快速列表quicklist，由压缩列表和双向链表组成，整体是双向链表。双向链表的`每个节点`都是一个ziplist
 
 元素较少的时候压缩列表是`顺序IO`
 
 ### SET
 
-整数集合intset，哈希表hashtable
+整数集合intset（有序，内存连续），哈希表hashtable
 
 ### ZSET
 
