@@ -26,6 +26,8 @@
 
 - [内存布局](https://github.com/Chunar5354/interview_note/blob/main/notes/memory_space.md)
 
+- [内存管理算法](https://github.com/Chunar5354/interview_note/blob/main/notes/buddy.md)
+
 - [阻塞与非阻塞](https://github.com/Chunar5354/interview_note/blob/main/notes/block.md)
 
 - [阻塞与调度的原因](https://github.com/Chunar5354/interview_note/blob/main/notes/block_schedule.md)
