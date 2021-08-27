@@ -90,39 +90,73 @@ func bubbleSort(nums []int) []int {
 
 核心思想是分治法，令枢轴左边都小于枢轴，右边都大于枢轴，然后再对左右两部分进行排序
 
-当含有相等的元素时，可以使枢轴部分变成一个区间`[lo, hi]`
 
-```go
-func quick_sort(nums []int, lo, hi int) []int {
-	if lo >= hi {
-		return nums
-	}
-	p1, p2, nums := sort(nums, lo, hi)
-	nums = quick_sort(nums, lo, p1-1)
-	nums = quick_sort(nums, p2+1, hi)
-	return nums
-}
+```python
+def quickSort(nums, l, r):
+    if l >= r:
+        return nums
+    nums, p = partition(nums, l, r)
+    nums = quickSort(nums, l, p-1)
+    nums = quickSort(nums, p+1, r)
 
-func sort(nums []int, lo, hi int) (int, int, []int) {
-	pivot := nums[lo]
-	i := lo + 1
-	// lo是枢轴，lo左边的要小于枢轴，hi右边的要大于枢轴
-	// 最终lo和hi中间(闭区间)都等于枢轴
-	for i <= hi {
-		if nums[i] < pivot {
-			nums[i], nums[lo] = nums[lo], nums[i]
-			i++
-			lo++
-		} else if nums[i] > pivot {
-			nums[i], nums[hi] = nums[hi], nums[i]
-			hi--
-		} else {
-			i++
-		}
-		// fmt.Println(lo, hi, i, nums)
-	}
-	return lo, hi, nums
-}
+    return nums
+
+def partition(nums, l, r):
+    if l >= r:
+        return nums, l
+    pivot = nums[l]
+    i = l
+    j = r
+    while i < j:
+		# 必须先减j再加i
+        while i < j and nums[j] >= pivot:
+            j -= 1
+        while i < j and nums[i] <= pivot:
+            i += 1
+        nums[i], nums[j] = nums[j], nums[i]
+    nums[i], nums[l] = nums[l], nums[i]
+
+    return nums, i
+```
+
+#### 非递归的快速排序
+
+```python
+def quickSort(nums):
+    l = 0
+    r = len(nums) - 1
+    if l >= r:
+        return nums
+    stack = []
+    stack.append(l)
+    stack.append(r)
+    while len(stack) > 0:
+        r = stack.pop()
+        l = stack.pop()
+        nums, p = partition(nums, l, r)
+        if l < p-1:
+            stack.append(l)
+            stack.append(p-1)
+        if r > p+1:
+            stack.append(p+1)
+            stack.append(r)
+    return nums
+
+def partition(nums, l, r):
+    if l >= r:
+        return nums, l
+    pivot = nums[l]
+    i = l
+    j = r
+    while i < j:
+        while i < j and nums[j] >= pivot:
+            j -= 1
+        while i < j and nums[i] <= pivot:
+            i += 1
+        nums[i], nums[j] = nums[j], nums[i]
+    nums[i], nums[l] = nums[l], nums[i]
+
+    return nums, i
 ```
 
 ### 简单选择排序
